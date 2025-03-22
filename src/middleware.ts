@@ -1,7 +1,7 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server"
 import { NextResponse } from "next/server"
 
-const isProtectedRoute = createRouteMatcher(["/(.*)"])
+const isProtectedRoute = createRouteMatcher(["/group(.*)"])
 
 export default clerkMiddleware(async (auth, req) => {
     const baseHost = process.env.NEXT_PUBLIC_URL as string
